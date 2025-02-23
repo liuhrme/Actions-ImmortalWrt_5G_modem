@@ -101,6 +101,10 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
+    - name: 检查磁盘空间        
+      run: |
+        df -hT $PWD
+        
 #    - name: Download package
 #      id: package
 #      run: |
