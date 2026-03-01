@@ -82,10 +82,7 @@ jobs:
       run: cd openwrt && ./scripts/feeds update -a && ./scripts/feeds install -a
 
     - name: update modem feeds
-      run: cd openwrt && echo 'src-git modem https://github.com/FUjr/QModem.git' >> feeds.conf.default && ./scripts/feeds update modem && ./scripts/feeds install -a -p modem
-
-    - name: update quectel-cm feeds
-      run: cd openwrt && echo 'src-git lede https://github.com/coolsnowwolf/lede.git' >> feeds.conf.default && ./scripts/feeds update lede && ./scripts/feeds install quectel_MHI    
+      run: cd openwrt && echo 'src-git QModem https://github.com/FUjr/QModem.git' >> feeds.conf.default && ./scripts/feeds update QModem && ./scripts/feeds install -a -p QModem  
 
     - name: Load custom configuration
       run: |
